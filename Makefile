@@ -11,5 +11,5 @@ clean:
 	rm -f $(TARGET)
 
 install:
-	install -D $(TARGET) $(DESTDIR)$(bindir)/$(TARGET)
+	install -D $(TARGET) $(DESTDIR)$(PREFIX)/bin/$(TARGET)
 
