@@ -1,6 +1,6 @@
 
-CFLAGS = -O2 -ggdb -Wall
-LDFLAGS = -lcurl -lfuse
+CFLAGS = -O2 -ggdb -Wall `pkg-config --cflags fuse`
+LDFLAGS = -lcurl `pkg-config --libs fuse`
 DEFS = -D_FILE_OFFSET_BITS=64 -DFUSE_USE_VERSION=29
 
 all:
