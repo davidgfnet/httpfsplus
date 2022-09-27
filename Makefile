@@ -4,5 +4,5 @@ LDFLAGS = -lcurl `pkg-config --libs fuse`
 DEFS = -D_FILE_OFFSET_BITS=64 -DFUSE_USE_VERSION=29
 
 all:
-	g++ -o httpfs fuseimpl.cc main.cc httpfs.cc $(DEFS) $(CFLAGS) $(LDFLAGS)
+	$(CXX) -o httpfs fuseimpl.cc main.cc httpfs.cc $(DEFS) $(CFLAGS) $(LDFLAGS)
 
